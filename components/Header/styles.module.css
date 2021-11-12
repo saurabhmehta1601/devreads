@@ -4,14 +4,7 @@
   font-family: var(--ff-quicksand);
   font-weight: var(--fw-bold);
   border-radius: var(--br-medium);
-  color: var(--clr-fg-green);
-  font-size: var(--fs-large);
   background-color: var(--clr-bg-light);
   box-shadow: var(--bs-dark);
 }
 
-@media ( max-width: 576px){
-  .title{
-    font-size: var(--fs-regular);
-  }
-}
