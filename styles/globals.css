@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --ff-quicksand:  'Quicksand', sans-serif; 
+  --fs-large: 2rem ;
+  --fs-regular: 1.3rem ;
+  --fw-bold: 700 ;
+  --clr-bg-light: rgba(255,255,255,0.9) ;   
+  --clr-fg-green: #2ecc71 ;   
+  --bs-dark: 0 0  12px 2px rgba(0,0,0, .4) ;
+  --br-medium: 4px ;
 }
 
 html,
