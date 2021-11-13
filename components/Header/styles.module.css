@@ -1,18 +1,8 @@
-.header {
-  display :flex ;
-  align-items: stretch;
-  margin: 0.7em;
-  padding: 0.4em 0.8em ;
-  border-radius: var(--br-medium);
-  background-color: var(--clr-bg-light);
-  box-shadow: var(--bs-dark);
-}
-
 .title {
+  background-color: rgba(0,0,0,0.7);
   font-family: var(--ff-quicksand);
   font-weight: var(--fw-bold);
-  flex: 1 ;
+  padding: 0.2em 0.4em ;
+  color:var(--clr-fg-green) !important;
 }
 
-.navList {
-}
