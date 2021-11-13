@@ -1,6 +1,6 @@
 import {gql, useQuery} from "@apollo/client"
 import React from "react"
-import Section from "../components/Section"
+import Section from "../components/SectionTitle"
 import Card from "../components/Card"
 import { Spin , Alert,Row,Col } from "antd"
 
@@ -21,7 +21,7 @@ export default function Home() {
   <>
     <Section title="All Ebooks"/>
     { data && (<Row justify="space-around" gutter={[16,16] }>
-      {data.ebook.map(eb => <Col><Card key={eb.id} title={eb.name} description={eb.description} /></Col> ) }
+      {data.ebook.map(eb => <Col key={eb.id}><Card  title={eb.name} description={eb.description} /></Col> ) }
       </Row>)
     }
 

@@ -6,7 +6,7 @@ export default function  Header (){
   return (   
     <header className={styles.header}>
         <Typography.Title level={1} >
-          <h1 className={styles.title}>DevReads</h1>
+          <div className={styles.title}>DevReads</div>
         </Typography.Title>  
     </header>
 )}
