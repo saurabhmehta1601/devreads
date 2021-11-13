@@ -9,7 +9,7 @@ import {
 const httpLink = new HttpLink({ uri: 'https://devreads.hasura.app/v1/graphql',
  })
 const authMiddleware = new ApolloLink((operation, forward) => {
-  // add the authorization to the headers
+  //add the authorization to the headers
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
