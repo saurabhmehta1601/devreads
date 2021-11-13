@@ -1,18 +1,11 @@
-.header {
-  display :flex ;
-  align-items: stretch;
+.section{
   margin: 0.7em;
-  padding: 0.4em 0.8em ;
   border-radius: var(--br-medium);
   background-color: var(--clr-bg-light);
   box-shadow: var(--bs-dark);
+  font-family: var(--ff-quicksand);
 }
 
 .title {
-  font-family: var(--ff-quicksand);
-  font-weight: var(--fw-bold);
-  flex: 1 ;
-}
-
-.navList {
+  padding: 0.4em 0.63em ;
 }
