@@ -1,8 +1,9 @@
 .title {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(255,255,255,0.9);
   font-family: var(--ff-quicksand);
   font-weight: var(--fw-bold);
   padding: 0.2em 0.4em ;
   color:var(--clr-fg-green) !important;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
 }
 
