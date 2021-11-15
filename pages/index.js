@@ -11,6 +11,7 @@ const query = gql`
       name
       description
       price
+      thumb_url
     }
 }
 `
@@ -21,7 +22,7 @@ export default function Home() {
   <>
     <Section title="All Ebooks"/>
     { data && (<Row justify="space-around" gutter={[16,16] }>
-      {data.ebook.map(eb => <Col key={eb.id}><Card  title={eb.name} description={eb.description} /></Col> ) }
+      {data.ebook.map(eb => <Col key={eb.id}><Card ebook={eb} /></Col> ) }
       </Row>)
     }
 
