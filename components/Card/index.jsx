@@ -1,13 +1,20 @@
 import { Card } from 'antd';
 import  Image from  "next/image"
 import styles from  "./styles.module.css"
+import { useRouter } from 'next/router'
 
-export default function EbookCard({ebook : {name,description,thumb_url} }){
+export default function EbookCard({ebook : {id,name,description,thumb_url} }){
 const { Meta } = Card;
+const router = useRouter()
+
+  const handleClick = () =>{
+    router.push(`/ebook/${id}`)
+  }
   return  (
   <Card
     style={{ width: 300,boxShadow: '0 0 16px 4px rgba(0,0,0,0.4)' }}
     className={styles.card}
+    onClick={handleClick}
     cover={
       <Image
         alt={name}

@@ -20,7 +20,7 @@ export default function Home() {
   const {data,loading,error} =  useQuery(query)
   return (
   <>
-    <Section title="All Ebooks"/>
+    <Section title="Web Development for Beginners"/>
     { data && (<Row justify="space-around" gutter={[16,16] }>
       {data.ebook.map(eb => <Col key={eb.id}><Card ebook={eb} /></Col> ) }
       </Row>)
@@ -29,8 +29,8 @@ export default function Home() {
     {loading && ( <Spin size="large"  />)}
 
       {error && ( <Alert
-      message="Cannot loading ebooks "
-      description="Please reload the page. "
+      message="Cannot loading ebooks"
+      description="Please reload the page."
       type="error"
       closable
     />)}
