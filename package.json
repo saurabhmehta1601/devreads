@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:watch": "next-remote-watch ./posts"
+    "dev:watch": "next-remote-watch ./courses"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",

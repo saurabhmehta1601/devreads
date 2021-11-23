@@ -19,7 +19,6 @@ export default function PostPage({ source, frontMatter }) {
       <main>
         <MDXRemote {...source} components={components} />
       </main>
-      <Typography.Paragraph code={true}>this is a paragraph</Typography.Paragraph >
     </Section>
   )
 }
