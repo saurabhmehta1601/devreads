@@ -8,19 +8,22 @@ import Link from "next/link"
 import Section from "../../components/Section"
 import { Typography } from 'antd'
 
+const Title = ({children}) => {
+  return <Typography.Title  style={{textAlign:'center',textDecoration:'underline'}} level={1}>{children}</Typography.Title>
+
+}
 const components = {
   Link,
+  Section,
+  Title
 }
 
 export default function PostPage({ source, frontMatter }) {
-  return (
-    <Section>
-        <Typography.Title  style={{textAlign:'center',textDecoration:'underline'}} level={1}>{frontMatter.title}</Typography.Title>
+  return (<>
       <main>
         <MDXRemote {...source} components={components} />
       </main>
-    </Section>
-  )
+  </>)
 }
 
 export const getStaticProps = async ({ params }) => {
