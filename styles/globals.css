@@ -7,8 +7,8 @@
 }
 
 :root {
-  --ff-quicksand:  'Quicksand', sans-serif; 
   --fs-large: 2rem ;
+  --ff-quicksand:  'Quicksand', sans-serif; 
   --fs-regular: 1.3rem ;
   --fw-bold: 700 ;
   --clr-bg-light: rgba(255,255,255,0.9) ;   

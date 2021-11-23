@@ -6,6 +6,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
 import Link from "next/link"
 import Section from "../../components/Section"
+import { Typography } from 'antd'
 
 const components = {
   Link,
@@ -13,29 +14,12 @@ const components = {
 
 export default function PostPage({ source, frontMatter }) {
   return (
-    <>
-      <div className="post-header">
-        <h1>{frontMatter.title}</h1>
-        {frontMatter.description && (
-          <p className="description">{frontMatter.description}</p>
-        )}
-      </div>
+    <Section>
+        <Typography.Title  style={{textAlign:'center',textDecoration:'underline'}} level={1}>{frontMatter.title}</Typography.Title>
       <main>
         <MDXRemote {...source} components={components} />
       </main>
-
-      <style jsx>{`
-        .post-header h1 {
-          margin-bottom: 0;
-        }
-        .post-header {
-          margin-bottom: 2rem;
-        }
-        .description {
-          opacity: 0.6;
-        }
-      `}</style>
-    </>
+    </Section>
   )
 }
 

@@ -1,5 +1,6 @@
 .section{
   margin: 2em 0.7em 4em ;
+  padding: 0.4em 0.8em ;
   border-radius: var(--br-medium);
   background-color: var(--clr-bg-light);
   box-shadow: var(--bs-dark);
