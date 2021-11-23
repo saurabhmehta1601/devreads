@@ -1,18 +1,14 @@
 import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import path from 'path'
-import { postFilePaths,POSTS_PATH } from '../../utils/mdxUtils'
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
-const components = {
+import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
+import Link from "next/link"
+import Section from "../../components/Section"
 
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
+const components = {
+  Link,
 }
 
 export default function PostPage({ source, frontMatter }) {
@@ -44,17 +40,12 @@ export default function PostPage({ source, frontMatter }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`)
-  const source = fs.readFileSync(postFilePath)
+  const courseFilePath = path.join(COURSES_PATH, `${params.slug}.mdx`)
+  const source = fs.readFileSync(courseFilePath)
 
   const { content, data } = matter(source)
 
   const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
-    },
     scope: data,
   })
 
@@ -67,10 +58,8 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = postFilePaths
-    // Remove file extensions for page paths
+  const paths = courseFilePaths 
     .map((path) => path.replace(/\.mdx?$/, ''))
-    // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }))
 
   return {

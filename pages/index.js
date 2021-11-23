@@ -1,8 +1,8 @@
 import {gql, useQuery} from "@apollo/client"
 import React from "react"
-import Section from "../components/SectionTitle"
+import Section from "../components/Section"
 import Card from "../components/Card"
-import { Spin , Alert,Row,Col } from "antd"
+import { Spin , Alert,Row,Col ,Typography} from "antd"
 
 const query = gql`
   query allEbooks {
@@ -20,7 +20,11 @@ export default function Home() {
   const {data,loading,error} =  useQuery(query)
   return (
   <>
-    <Section title="Web Development for Beginners"/>
+    <Section>
+      <Typography.Title level={3}>
+        All courses
+      </Typography.Title>
+    </Section>
     { data && (<Row justify="space-around" gutter={[16,16] }>
       {data.ebook.map(eb => <Col key={eb.id}><Card ebook={eb} /></Col> ) }
       </Row>)

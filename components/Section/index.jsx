@@ -3,10 +3,10 @@ import { Typography  } from 'antd';
 import styles from "./styles.module.css"
 
 
-export default function Section({title}){
+export default function Section({children}){
   return (   
       <div className={styles.section}>
-        <Typography.Title  level={3}  className={styles.title}>{title}</Typography.Title>
+        {children}
       </div>
 )}
 
