@@ -7,10 +7,12 @@
 }
 
 :root {
-  --fs-large: 2rem ;
   --ff-quicksand:  'Quicksand', sans-serif; 
-  --fs-regular: 1.3rem ;
+  --ff-mono:  monospace, sans-serif; 
+  --fs-large: 2rem ;
+  --fs-regular: 1.02rem ;
   --fw-bold: 700 ;
+  --fw-regular: 400 ;
   --clr-bg-light: rgba(255,255,255,0.9) ;   
   --clr-fg-green: #2ecc71 ;   
   --bs-dark: 0 0  12px 2px rgba(0,0,0, .4) ;
@@ -22,9 +24,18 @@ body {
   height:100vh;
   width:100vw;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background:  url(/background.jpg) ;
-    background-size: contain;
+  background:  url(/background.jpg) ;
+  background-size: contain;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--ff-quicksand);
+  font-weight: var(--fw-bold);
+}
+
+p{
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-mono);
+  text-indent: 0.6em ;
+}
