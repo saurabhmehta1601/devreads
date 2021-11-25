@@ -9,7 +9,7 @@ const query = gql`
     devroutes {
       id
       name
-      coursesByDevroute {
+      coursesByDevroute (order_by: {added_at: asc}){
         id
         name
         description
@@ -26,7 +26,7 @@ export default function Home() {
       {data && data.devroutes.map(devroute => <>
         <Section>
           <Typography.Title level={3}>
-            {devroute.name}
+            {devroute.name  }
           </Typography.Title>
         </Section>
         <Row justify="space-around" gutter={[16,16] }>

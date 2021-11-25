@@ -10,6 +10,9 @@ const router = useRouter()
   const handleClick = () =>{
     router.push(`/courses/${name}`)
   }
+
+  const transformName = (name) => name.split("-").join(" ").toUpperCase() 
+
   return  (
   <Card
     style={{ width: 300,boxShadow: '0 0 16px 4px rgba(0,0,0,0.4)' }}
@@ -19,13 +22,13 @@ const router = useRouter()
       <Image
         alt={name}
         width={300}
-        height={350}
+        height={250}
         src={thumb_url}
       />
     }
   >
     <Meta
-      title={name}
+      title={transformName(name)}
       description={description}
     />
   </Card>
