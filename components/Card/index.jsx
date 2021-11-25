@@ -3,12 +3,12 @@ import  Image from  "next/image"
 import styles from  "./styles.module.css"
 import { useRouter } from 'next/router'
 
-export default function EbookCard({ebook : {id,name,description,thumb_url} }){
+export default function CourseCard({course: {name,description,thumb_url} }){
 const { Meta } = Card;
 const router = useRouter()
 
   const handleClick = () =>{
-    router.push(`/ebook/${id}`)
+    router.push(`/courses/${name}`)
   }
   return  (
   <Card

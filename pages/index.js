@@ -5,30 +5,38 @@ import Card from "../components/Card"
 import { Spin , Alert,Row,Col ,Typography} from "antd"
 
 const query = gql`
-  query allEbooks {
-    ebook{
+  query allDevroutes {
+    devroutes {
       id
       name
-      description
-      price
-      thumb_url
+      coursesByDevroute {
+        id
+        name
+        description
+        thumb_url
+      }
     }
-}
+  }
 `
 
 export default function Home() {
   const {data,loading,error} =  useQuery(query)
   return (
   <>
-    <Section>
-      <Typography.Title level={3}>
-        All courses
-      </Typography.Title>
-    </Section>
-    { data && (<Row justify="space-around" gutter={[16,16] }>
-      {data.ebook.map(eb => <Col key={eb.id}><Card ebook={eb} /></Col> ) }
-      </Row>)
-    }
+      {data && data.devroutes.map(devroute => <>
+        <Section>
+          <Typography.Title level={3}>
+            {devroute.name}
+          </Typography.Title>
+        </Section>
+        <Row justify="space-around" gutter={[16,16] }>
+          { devroute.coursesByDevroute.map(course => {
+            return <Col key={course.id}> <Card course={course} /></Col> 
+            }) 
+          }
+        </Row> 
+      </>)
+        }
 
     {loading && ( <Spin size="large"  />)}
 
