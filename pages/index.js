@@ -28,8 +28,8 @@ export default function Home() {
   const isTablet= useMediaQuery({ query: `(max-width:${MAX_WIDTH_TABLET})` })
   console.warn("is mobile is ",isMobile)
   return ( <>
-      {data && data.devroutes.map((devroute,idx )=> (<>
-        <Section key={idx}>
+      {data && data.devroutes.map((devroute,idx )=> (<div key={idx}>
+        <Section >
           <Typography.Title level={3}>
             {devroute.name  }
           </Typography.Title>
@@ -39,7 +39,7 @@ export default function Home() {
             return  <Card key={course.id} course={course} /> 
             }) }
         </Carousel>
-      </>)
+      </div>)
       )
     }
 
