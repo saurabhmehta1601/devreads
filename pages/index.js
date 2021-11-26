@@ -2,8 +2,9 @@ import { gql, useQuery } from "@apollo/client"
 import React from "react"
 import Section from "../components/Section"
 import Card from "../components/Card"
-import { Spin , Alert ,Typography} from "antd"
+import {  Alert ,Typography} from "antd"
 import Carousel from "react-multi-carousel";
+import LoadingPage from "../components/LoadingPage"
 
 const query = gql`
   query allDevroutes {
@@ -63,7 +64,7 @@ export default function Home() {
       )
     }
 
-    {loading && ( <Spin size="large"  />)}
+    {loading && ( <LoadingPage   />)}
 
       {error && ( <Alert
       message="Cannot loading ebooks"
