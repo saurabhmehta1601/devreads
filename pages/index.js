@@ -50,7 +50,11 @@ export default function Home() {
           </Typography.Title>
         </Section>
         {/* Show 1 slide on mobile */}
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} 
+          ssr={true} 
+          keyBoardControl={true}    
+          containerClass="carousel-container" 
+          itemClass="carousel-item-padding-40-px">
             { devroute.coursesByDevroute.map(course => {
               return  <Card key={course.id} course={course} /> 
               }) }

@@ -58,3 +58,7 @@ p{
 hr {
   margin: 1em auto ;
 }
+
+.carousel-container {
+  padding: 1.5em ;
+}
