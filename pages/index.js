@@ -3,6 +3,7 @@ import React from "react"
 import Section from "../components/Section"
 import Card from "../components/Card"
 import { Spin , Alert,Row,Col ,Typography} from "antd"
+import { Carousel } from '@trendyol-js/react-carousel';
 
 const query = gql`
   query allDevroutes {
@@ -29,12 +30,11 @@ export default function Home() {
             {devroute.name  }
           </Typography.Title>
         </Section>
-        <Row justify="space-around" gutter={[16,16] }>
+        <Carousel show={2} swiping={true} useArrowKeys={true} infinite={false}>
           { devroute.coursesByDevroute.map(course => {
-            return <Col key={course.id}> <Card course={course} /></Col> 
-            }) 
-          }
-        </Row> 
+            return  <Card course={course} /> 
+            }) }
+        </Carousel>
       </>)
         }
 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",
+    "@trendyol-js/react-carousel": "^2.0.0",
     "antd": "^4.16.13",
     "graphql": "^16.0.1",
     "gray-matter": "^4.0.3",
