@@ -11,7 +11,7 @@ export  default  function LoadingPage(){
 const LoadingContainer =  styled.div`
   position:fixed;
   top:0;
-  background-color:#ddd ;
+  background-color:#333 ;
   bottom:0;
   left:0;
   right:0;
