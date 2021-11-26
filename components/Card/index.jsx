@@ -28,7 +28,7 @@ const router = useRouter()
     }
   >
     <Meta
-      title={transformName(name)}
+      title={name ? transformName(name) : name}
       description={description}
     />
   </Card>

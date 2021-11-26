@@ -1,3 +1,6 @@
+// react multi carousel styles
+import "react-multi-carousel/lib/styles.css";
+// ant design styles 
 import 'antd/dist/antd.css'
 import '../styles/globals.css'
 import { ApolloProvider } from '@apollo/client'

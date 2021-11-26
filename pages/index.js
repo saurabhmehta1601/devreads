@@ -1,11 +1,9 @@
-import {gql, useQuery} from "@apollo/client"
+import { gql, useQuery } from "@apollo/client"
 import React from "react"
 import Section from "../components/Section"
 import Card from "../components/Card"
 import { Spin , Alert ,Typography} from "antd"
-import { Carousel } from '@trendyol-js/react-carousel';
-import {useMediaQuery} from "react-responsive"
-import {MAX_WIDTH_MOBILE, MAX_WIDTH_TABLET} from "../utils/constants"
+import Carousel from "react-multi-carousel";
 
 const query = gql`
   query allDevroutes {
@@ -21,12 +19,29 @@ const query = gql`
     }
   }
 `
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 
 export default function Home() {
-  const {data,loading,error} =  useQuery(query)
-  const isMobile = useMediaQuery({ query: `(max-width:${MAX_WIDTH_MOBILE})` })
-  const isTablet= useMediaQuery({ query: `(max-width:${MAX_WIDTH_TABLET})` })
-  console.warn("is mobile is ",isMobile)
+  const { data,loading,error } =  useQuery(query)
+
   return ( <>
       {data && data.devroutes.map((devroute,idx )=> (<div key={idx}>
         <Section >
@@ -34,10 +49,11 @@ export default function Home() {
             {devroute.name  }
           </Typography.Title>
         </Section>
-        <Carousel show={ isMobile ? 1 : isTablet ? 2: 3} swiping={true} useArrowKeys={true} infinite={false}>
-          { devroute.coursesByDevroute.map(course => {
-            return  <Card key={course.id} course={course} /> 
-            }) }
+        {/* Show 1 slide on mobile */}
+        <Carousel responsive={responsive}>
+            { devroute.coursesByDevroute.map(course => {
+              return  <Card key={course.id} course={course} /> 
+              }) }
         </Carousel>
       </div>)
       )
