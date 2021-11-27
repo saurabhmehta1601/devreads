@@ -1,10 +1,11 @@
 import { gql, useQuery } from "@apollo/client"
-import React from "react"
+import React, {useEffect, useState} from "react"
 import Section from "../components/Section"
 import Card from "../components/Card"
 import {  Alert ,Typography} from "antd"
 import Carousel from "react-multi-carousel";
 import LoadingPage from "../components/LoadingPage"
+import { useRouter } from 'next/router'
 
 const query = gql`
   query allDevroutes {
@@ -42,6 +43,18 @@ const responsive = {
 
 export default function Home() {
   const { data,loading,error } =  useQuery(query)
+  const router = useRouter()
+  const [loadingCourse,setLoadingCourse] = useState(false)
+  const handleCardClick = (name) => { 
+    router.push(`/courses/${name}`)
+    setLoadingCourse(true)
+  }
+  
+  useEffect(() => {
+    return () => {
+      setLoadingCourse(false)
+    }
+  },[])
 
   return ( <>
       {data && data.devroutes.map((devroute,idx )=> (<div key={idx}>
@@ -57,14 +70,14 @@ export default function Home() {
           containerClass="carousel-container" 
           itemClass="carousel-item-padding-40-px">
             { devroute.coursesByDevroute.map(course => {
-              return  <Card key={course.id} course={course} /> 
+              return  <Card onClick={() => handleCardClick(course.name)} key={course.id} course={course} /> 
               }) }
         </Carousel>
       </div>)
       )
     }
 
-    {loading && ( <LoadingPage   />)}
+    {(loading || loadingCourse)&& ( <LoadingPage   />)}
 
       {error && ( <Alert
       message="Cannot loading ebooks"
