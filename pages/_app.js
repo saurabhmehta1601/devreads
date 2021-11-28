@@ -6,11 +6,13 @@ import '../styles/globals.css'
 import { ApolloProvider } from '@apollo/client'
 import client from "../client"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function MyApp({ Component, pageProps }) {
   return <ApolloProvider client={client}>
     <Header />
     <Component {...pageProps} />
+    <Footer />
     </ApolloProvider>
 }
 
