@@ -7,11 +7,11 @@ import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
 import Link from "next/link"
 import Section from "../../components/Section"
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Title from "../../components/Title"
 
 const CustomSyntaxHighlighter = (props) => {
-  return <SyntaxHighlighter {...props}  style={dark}  />
+  return <SyntaxHighlighter {...props}  style={nord}  />
 }
 
 const components = {
