@@ -6,16 +6,19 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
 import Link from "next/link"
 import Section from "../../components/Section"
-import { Typography } from 'antd'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import Title from "../../components/Title"
 
-const Title = ({children}) => {
-  return <Typography.Title  style={{textAlign:'center',textDecoration:'underline'}} level={1}>{children}</Typography.Title>
-
+const CustomSyntaxHighlighter = (props) => {
+  return <SyntaxHighlighter {...props}  style={docco}  />
 }
+
 const components = {
   Link,
   Section,
-  Title
+  Title,
+  SyntaxHighlighter: CustomSyntaxHighlighter
 }
 
 export default function PostPage({ source, frontMatter }) {
