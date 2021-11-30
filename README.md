@@ -23,6 +23,7 @@ yarn run dev
 yarn run dev:watch
 ```
 
+4. Open http://localhost:3000 with your browser to see the result. 
 
 ## Contributing 
 This project is inspired by JAMStack paradigm .You can contribute to project by documenting ,adding testing,  suggesting and providing content for courses which are already there or new one or in any other way you feel which can add value to this repository .
