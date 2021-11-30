@@ -6,12 +6,15 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
 import Link from "next/link"
 import Section from "../../components/Section"
-import SyntaxHighlighter from 'react-syntax-highlighter'
+import  SyntaxHighlighter  from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Title from "../../components/Title"
 
+
 const CustomSyntaxHighlighter = (props) => {
-  return <SyntaxHighlighter {...props}  style={nord}  />
+  return <SyntaxHighlighter  {...props}  style={nord}  >
+      {props.codeString}
+    </SyntaxHighlighter>
 }
 
 const components = {

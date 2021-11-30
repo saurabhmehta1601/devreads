@@ -71,3 +71,10 @@ ul{
 .carousel-container {
   padding: 1.5em ;
 }
+
+pre {
+  background-color:  #010127;
+  padding: 0.7em ;
+  border-radius: 4px ;
+  color:white ;
+}
