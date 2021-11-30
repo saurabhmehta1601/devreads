@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:watch": "next-remote-watch ./courses"
+    "dev:watch": "next-remote-watch ./courses",
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",
@@ -25,7 +27,17 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "cz-customizable": "^6.3.0",
     "eslint": "7",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "husky": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   }
 }
