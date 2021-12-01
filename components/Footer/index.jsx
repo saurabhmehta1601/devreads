@@ -4,7 +4,7 @@ export default function  Footer(){
   return <StyledFooter>
     <hr />
     <p>
-      Made  with ❤️   by  <a target="_blank"  href="https://saurabhmehta.vercel.app">Saurabh </a>
+      Made  with ❤️   by  <a target="_blank"  rel="noreferrer"  href="https://saurabhmehta.vercel.app">Saurabh </a>
     </p>
   </StyledFooter>
 }
