@@ -19,14 +19,15 @@ const CustomSyntaxHighlighter = (props) => {
 
 const components = {
   Link,
-  Section,
-  Title,
-  SyntaxHighlighter: CustomSyntaxHighlighter
+  Section
 }
 
 export default function PostPage({ source, frontMatter }) {
   return (<>
       <main>
+        <Section>
+          <Title> {frontMatter.title} </Title>
+        </Section>
         <MDXRemote {...source} components={components} />
       </main>
   </>)
