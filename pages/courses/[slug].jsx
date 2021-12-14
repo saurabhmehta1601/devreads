@@ -6,28 +6,19 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { courseFilePaths,COURSES_PATH } from '../../utils/mdxUtils'
 import Link from "next/link"
 import Section from "../../components/Section"
-import  SyntaxHighlighter  from 'react-syntax-highlighter'
-import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Title from "../../components/Title"
-
-
-const CustomSyntaxHighlighter = (props) => {
-  return <SyntaxHighlighter  {...props}  style={nord}  >
-      {props.codeString}
-    </SyntaxHighlighter>
-}
+import Heading from "../../components/Section/Heading"
 
 const components = {
   Link,
-  Section
+  Section,
+  h2: Heading
 }
 
 export default function PostPage({ source, frontMatter }) {
   return (<>
       <main>
-        <Section>
-          <Title> {frontMatter.title} </Title>
-        </Section>
+        <Title> {frontMatter.title} </Title>
         <MDXRemote {...source} components={components} />
       </main>
   </>)

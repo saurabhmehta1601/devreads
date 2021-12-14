@@ -32,6 +32,7 @@ body {
   background:  url(/background.jpg) ;
   background-size: contain;
   font-weight: 600;
+  font-size: 1rem ;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -55,12 +56,6 @@ h4{
   font-size: 1.3rem;
 }
 
-p{
-  font-size: var(--fs-regular);
-  font-weight: var(--fw-regular);
-  font-family: var(--ff-mono);
-}
-
 hr {
   margin: 1em auto ;
 }
@@ -70,7 +65,6 @@ ul,ol{
 }
 
 li {
-  font-size: 0.9rem ;
   text-indent: 8px ;
 }
 
