@@ -10,3 +10,7 @@
 .title {
   padding: 0.4em 0.63em ;
 }
+
+.section p {
+  padding-top: 1rem ; 
+}

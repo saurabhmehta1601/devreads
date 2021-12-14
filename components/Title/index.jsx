@@ -1,5 +1,6 @@
 import { Typography } from 'antd'
-export default function Title({children}){
-  return <Typography.Title  style={{textAlign:'center',textDecoration:'underline'}} level={1}>{children}</Typography.Title>
-}
+import styles from "./styles.module.css"
 
+export default function Title({children}){
+  return <Typography.Title  className={styles.title} level={1}>{children}</Typography.Title>
+}
