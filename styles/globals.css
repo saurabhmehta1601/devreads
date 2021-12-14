@@ -14,6 +14,7 @@
   --fw-bold: 700 ;
   --fw-regular: 400 ;
   --clr-bg-light: rgba(255,255,255,0.9) ;   
+  --clr-bg-dark: #333 ;   
   --clr-fg-green: #2ecc71 ;   
   --bs-dark: 0 0  12px 2px rgba(0,0,0, .4) ;
   --br-medium: 4px ;
@@ -30,6 +31,7 @@ body {
   overflow-x: hidden;
   background:  url(/background.jpg) ;
   background-size: contain;
+  font-weight: 600;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -63,9 +65,13 @@ hr {
   margin: 1em auto ;
 }
 
-ul{
+ul,ol{
   padding:0.3em ;
-  font-size:1rem ;
+}
+
+li {
+  font-size: 0.9rem ;
+  text-indent: 8px ;
 }
 
 .carousel-container {
