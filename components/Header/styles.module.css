@@ -1,9 +1,24 @@
 .title {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: var(--ff-quicksand);
   font-weight: var(--fw-bold);
-  padding: 0.2em 0.4em ;
-  color:var(--clr-fg-green) !important;
-  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  padding: 0.2em 0.6em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.musicIcon {
+  color: black;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+.musicIconActive {
+  color: var(--clr-fg-red);
+}
+
+.header {
+  justify-content: space-between;
+  width: 100vw;
+}
