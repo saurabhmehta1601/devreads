@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,75 +7,81 @@
 }
 
 :root {
-  --ff-quicksand:  'Quicksand', sans-serif; 
-  --ff-mono:  monospace, sans-serif; 
-  --fs-large: 2rem ;
-  --fs-regular: 1.02rem ;
-  --fw-bold: 700 ;
-  --fw-regular: 400 ;
-  --clr-bg-light: rgba(255,255,255,0.9) ;   
-  --clr-bg-dark: #333 ;   
-  --clr-fg-green: #2ecc71 ;   
-  --clr-fg-red: #e91e63 ; 
-  --bs-dark: 0 0  12px 2px rgba(0,0,0, .4) ;
-  --br-medium: 4px ;
+  --ff-quicksand: "Quicksand", sans-serif;
+  --ff-mono: monospace, sans-serif;
+  --fs-large: 2rem;
+  --fs-regular: 1.02rem;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --clr-bg-light: rgba(255, 255, 255, 0.9);
+  --clr-bg-dark: #333;
+  --clr-fg-green: #2ecc71;
+  --clr-fg-red: #e91e63;
+  --bs-dark: 0 0 12px 2px rgba(0, 0, 0, 0.4);
+  --br-medium: 4px;
 }
 
-html{
-  font-size:18px;
+html {
+  font-size: 18px;
 }
 
 html,
 body {
-  height:100vh;
-  width:100vw;
+  height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
-  background:  url(/background.jpg) ;
+  background: url(/background.jpg);
   background-size: contain;
   font-weight: 600;
-  font-size: 1rem ;
+  font-size: 1rem;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--ff-quicksand);
   font-weight: var(--fw-bold);
 }
 
-h1{
-  font-size: 2rem  ;
+h1 {
+  font-size: 2rem;
 }
 
-h2{
+h2 {
   font-size: 1.7rem;
 }
 
-h3{
+h3 {
   font-size: 1.4rem;
 }
 
-h4{
+h4 {
   font-size: 1.3rem;
 }
 
 hr {
-  margin: 1em auto ;
+  margin: 1em auto;
 }
 
-ul,ol{
-  padding:0.3em ;
+ul,
+ol {
+  padding: 0.3em;
 }
 
 li {
-  text-indent: 8px ;
+  text-indent: 8px;
 }
 
 .carousel-container {
-  padding: 1.5em ;
+  padding: 1.5em;
 }
 
 pre {
-  background-color:  #010127;
-  padding: 0.7em ;
-  border-radius: 4px ;
-  color:white ;
+  background-color: #010127;
+  padding: 0.7em;
+  border-radius: 4px;
+  color: white;
 }

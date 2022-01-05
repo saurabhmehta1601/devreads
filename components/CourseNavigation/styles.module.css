@@ -1,0 +1,6 @@
+.sider{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  max-width: 25ch;
+}
