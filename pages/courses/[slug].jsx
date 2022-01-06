@@ -8,7 +8,7 @@ import Link from "next/link";
 import Section from "../../components/Section";
 import Title from "../../components/Title";
 import Heading from "../../components/Section/Heading";
-import Sider from "../../components/CourseNavigation";
+import Sider from "../../components/Sidebar";
 import FloatingButton from "../../components/SidebarTriggerButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -21,15 +21,12 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   return (
     <>
-      <Sider />
+      <Sider data={frontMatter.breakpoints} />
       <main>
         <Title> {frontMatter.title} </Title>
         <MDXRemote {...source} components={components} />
       </main>
-      <FloatingButton
-        icon={<GiHamburgerMenu />}
-        className="sidebar-trigger-btn"
-      />
+      <FloatingButton icon={<GiHamburgerMenu />} />
     </>
   );
 }
@@ -39,7 +36,6 @@ export const getStaticProps = async ({ params }) => {
   const source = fs.readFileSync(courseFilePath);
 
   const { content, data } = matter(source);
-
   const mdxSource = await serialize(content, {
     scope: data,
   });
