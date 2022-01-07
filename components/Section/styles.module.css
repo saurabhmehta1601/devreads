@@ -1,6 +1,6 @@
-.section{
-  margin: 2em 0.7em 4em ;
-  padding: 0.4em 1.8em ;
+.section {
+  margin: 2em 0.7em 2em;
+  padding: 1em 1.8em;
   border-radius: var(--br-medium);
   background-color: var(--clr-bg-light);
   box-shadow: var(--bs-dark);
@@ -8,9 +8,9 @@
 }
 
 .title {
-  padding: 0.4em 0.63em ;
+  padding: 0.4em 0.63em;
 }
 
 .section p {
-  padding-top: 1rem ; 
+  padding-top: 1rem;
 }

@@ -1,17 +1,23 @@
 ---
 title: Javascript
+breakpoints:
+  [
+    { "Introduction": ["Definition"] },
+    { "Features": ["Structure Manipulation", "Styles Manipulation"] },
+  ]
 ---
-<Section>
+
+<Section data-name="Definition">
 
 ## What is javascript 
 
-* JavaScript is the world's most popular programming language.
-* JavaScript is the programming language of the Web.
-* JavaScript is easy to learn.
+- JavaScript is the world's most popular programming language.
+- JavaScript is the programming language of the Web.
+- JavaScript is easy to learn.
 
 </Section>
 
-<Section>
+<Section data-name="Structure Manipulation">
 
 ## Javascript can change HTML content
 
@@ -21,6 +27,7 @@ The example below "finds" an HTML element (with id="demo"), and changes the elem
 ```javascript
 document.getElementById("demo").innerHTML = "Hello JavaScript";
 ```
+
 JavaScript accepts both double and single quotes:
 
 ```javascript
@@ -29,7 +36,7 @@ document.getElementById("demo").innerHTML = 'Hello JavaScript';
 
 </Section>
 
-<Section>
+<Section data-name="Styles Manipulation">
 
 ## Javascript can change HTML Styles (CSS)
 
@@ -39,4 +46,5 @@ Changing the style of an HTML element, is a variant of changing an HTML attribut
 ```javascript
 document.getElementById("demo").style.fontSize = "35px";
 ```
+
 </Section>

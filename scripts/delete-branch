@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
 branch_name=$(git branch --show-current) 
 git checkout main
