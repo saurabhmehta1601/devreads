@@ -8,7 +8,8 @@
     "lint": "next lint",
     "dev:watch": "next-remote-watch ./courses",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "del-branch": "./scripts/delete-branch"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",

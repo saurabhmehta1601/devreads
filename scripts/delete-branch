@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+branch_name=$(git branch --show-current) 
+git checkout main
+git branch -D $branch_name
