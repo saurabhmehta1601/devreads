@@ -4,15 +4,18 @@ import { useSelector, useDispatch } from "react-redux";
 const { Sider } = Layout;
 const { SubMenu, Item } = Menu;
 import styles from "./styles.module.css";
+import { close } from "../../redux/features/SidebarSlice";
 
 const CourseNavigation = ({ data }) => {
   const { shouldOpen } = useSelector((state) => state.sidebar);
+  const dispatch = useDispatch();
 
   const navigateToItem = (e) => {
-    const el = document.querySelector(`[data-name=${e.key}]`);
+    const el = document.querySelector(`[data-name='${e.key}']`);
     el.scrollIntoView({
       behavior: "smooth",
     });
+    dispatch(close());
   };
 
   return (
