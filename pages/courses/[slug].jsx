@@ -5,11 +5,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { courseFilePaths, COURSES_PATH } from "../../utils/mdxUtils";
 import Link from "next/link";
-import Section from "../../components/Section";
-import Title from "../../components/Title";
-import Heading from "../../components/Section/Heading";
-import Sider from "../../components/Sidebar";
-import FloatingButton from "../../components/SidebarTriggerButton";
+import {Section,Title,Heading,Sidebar,SidebarTriggerButton} from "../../components/exports"
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const components = {
@@ -21,12 +17,12 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   return (
     <>
-      <Sider data={frontMatter.breakpoints} />
+      <Sidebar data={frontMatter.breakpoints} />
       <main>
         <Title> {frontMatter.title} </Title>
         <MDXRemote {...source} components={components} />
       </main>
-      <FloatingButton icon={<GiHamburgerMenu />} />
+      <SidebarTriggerButton icon={<GiHamburgerMenu />} />
     </>
   );
 }
