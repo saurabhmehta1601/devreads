@@ -80,8 +80,13 @@ li {
 }
 
 pre {
-  background-color: #010127;
+  background-color: #fff;
   padding: 0.7em;
   border-radius: 4px;
-  color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+code {
+  margin: 1em ;
 }

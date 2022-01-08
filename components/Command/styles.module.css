@@ -1,0 +1,12 @@
+.code {
+    background-color:rgb(20, 20, 20) ;
+    display: block;
+    color: rgb(241, 240, 240) ;
+    padding: 0.4em 0.8em ;
+    border-radius: 4px;
+}
+
+.sign {
+    color:rgb(128, 211, 128) ;
+    font-weight: 900;
+}
