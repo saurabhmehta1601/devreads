@@ -8,14 +8,13 @@ breakpoints: [{"Introduction": [""]}]
 ## Before getting started
 
 On linux, check all existing shells on your computer by running :
-```bash
-> cat /etc/shells
-```
+<Command>
+ cat /etc/shells
+</Command>
 
 You can check path to your bash shell using command :
-```bash
-> which bash
-```
+
+<Command>  which bash </Command>
 
 </Section>
 
@@ -26,25 +25,24 @@ You can check path to your bash shell using command :
 1. Naviagate to desktop and create a file my-first-script .
 2. Now open file in your favourite IDE/code editor ( btw mine is VS Code ).
 3. Paste the code written below:
+
 ```bash
 #! /bin/bash
 echo "This is my first BASH script"
 ```
 
 4. Open terminal in root of project and then make the script executable by running following command from terminal :
-```bash
-> chmod +x my-first-script
-```
+
+<Command>  chmod +x my-first-script </Command>
+
 5. Now execute the script from terminal using command :
 
-```bash
-./my-first-script
-```
+<Command>  ./my-first-script </Command>
 
 You should see following printed out on terminal .
-```bash
-This is my first bash script
-```
+
+<Output> This is my first bash script </Output>
+
 </Section>
 
 <Section data-name="Comments">
@@ -81,16 +79,13 @@ mydelimiter
 
 * Following command outputs "Hello world" to file hello.txt
 
-```bash
-echo Hello World > hello.txt
-```
+<Command>  echo Hello World > hello.txt </Command>
 
 Note : '>' sign overwrites file contents while '>>' sign appends to file content .
 
 * Following command takes input from terminal and outputs to file hello.txt
-```bash
-cat > hello.txt
-```
+
+<Command>  cat > hello.txt </Command>
 
 Note: When you are done giving input press Ctrl-c on terminal .
 
@@ -239,3 +234,55 @@ done
 
 </Section>
 
+<Section data-name="Program Inputs">
+
+## Inputs in Bash
+
+* Taking variables as input 
+
+```bash
+echo "Enter your age"
+read age  # taking age variable as input 
+echo "Your age is $age"
+```
+
+* Taking script arguments 
+
+Run script and pass arguments as shown :
+./your-script devreads is awesome
+
+```bash
+echo $0 #prints filename i.e ./your-script
+echo $1 # prints first argument i.e devreads
+echo $2 # prints second argument i.e is
+echo $3 # prints third argument i.e awesome
+```
+
+* Read and print contents of file file.txt using while loop
+
+```bash
+while read line
+  do
+    echo $line
+done < file.txt
+```
+
+</Section>
+
+<Section>
+
+## Program Output
+
+* Print STDOUT of program
+
+This is our bash script 
+
+```bash
+echo "Hello world"
+```
+
+Run command :
+
+<Command>  ./your-script > output.txt </Command> 
+
+</Section>
