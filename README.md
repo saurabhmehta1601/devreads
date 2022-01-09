@@ -1,3 +1,6 @@
+## Live Preview
+Live preview of project can be found [here]( https://devreads-4mswulesi-saurabhmehta1601.vercel.app/ ) .
+
 ## Introduction 
 Devreads is a plateform where you can learn different technologies  and skill from the courses on out site . 
 
