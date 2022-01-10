@@ -5,13 +5,13 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { courseFilePaths, COURSES_PATH } from "../../utils/mdxUtils";
 import Link from "next/link";
-import {Section,Title,Heading,Sidebar,SidebarTriggerButton, Output, Command} from "../../components/exports"
+import {Section,Title,H2,Sidebar,SidebarTriggerButton, Output, Command} from "../../components/exports"
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const components = {
   Link,
   Section,
-  h2: Heading,
+  h2: H2,
   Output,
   Command
 };

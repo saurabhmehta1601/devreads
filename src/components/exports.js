@@ -10,3 +10,4 @@ export { default as Title } from "./Title";
 export { default as Output } from "./Output";
 export { default as Command } from "./Command";
 export { default as Carousel } from "./Carousel";
+export { default as H2} from "./H2";
