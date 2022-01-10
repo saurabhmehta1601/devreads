@@ -1,10 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
-import Section from "../components/Section";
-import Card from "../components/Card";
+import { Section, Card, Carousel, LoadingPage } from "../components/exports";
 import { Alert, Typography } from "antd";
-import Carousel from "react-multi-carousel";
-import LoadingPage from "../components/LoadingPage";
 import { useRouter } from "next/router";
 
 const query = gql`
@@ -21,25 +18,6 @@ const query = gql`
     }
   }
 `;
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
 
 export default function Home() {
   const { data, loading, error } = useQuery(query);
@@ -65,13 +43,7 @@ export default function Home() {
               <Typography.Title level={3}>{devroute.name}</Typography.Title>
             </Section>
             {/* Show 1 slide on mobile */}
-            <Carousel
-              responsive={responsive}
-              ssr={true}
-              keyBoardControl={true}
-              containerClass="carousel-container"
-              itemClass="carousel-item-padding-40-px"
-            >
+            <Carousel>
               {devroute.coursesByDevroute.map((course) => {
                 return (
                   <Card

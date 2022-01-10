@@ -1,0 +1,4 @@
+.carouselItem {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,11 +1,12 @@
-export {default as Card} from "./Card"
-export {default as Footer} from "./Footer"
-export {default as Header} from "./Header"
-export {default as HorizontalMenu } from "./HorizontalMenu"
-export {default as LoadingPage} from "./LoadingPage"
-export {default as Section} from "./Section"
-export {default as Sidebar} from "./Sidebar"
-export {default as SidebarTriggerButton} from "./SidebarTriggerButton"
-export {default as Title} from "./Title"
-export {default as Output} from "./Output"
-export {default as Command} from "./Command"
+export { default as Card } from "./Card";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
+export { default as HorizontalMenu } from "./HorizontalMenu";
+export { default as LoadingPage } from "./LoadingPage";
+export { default as Section } from "./Section";
+export { default as Sidebar } from "./Sidebar";
+export { default as SidebarTriggerButton } from "./SidebarTriggerButton";
+export { default as Title } from "./Title";
+export { default as Output } from "./Output";
+export { default as Command } from "./Command";
+export { default as Carousel } from "./Carousel";
