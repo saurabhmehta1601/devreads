@@ -3,26 +3,13 @@ import React, { useEffect, useState } from "react";
 import { Section, Card, Carousel, LoadingPage } from "../components/exports";
 import { Alert, Typography } from "antd";
 import { useRouter } from "next/router";
-
-const query = gql`
-  query allDevroutes {
-    devroutes {
-      id
-      name
-      coursesByDevroute(order_by: { added_at: asc }) {
-        id
-        name
-        description
-        thumb_url
-      }
-    }
-  }
-`;
+import { allDevroutes } from "../GraphQL/queries";
 
 export default function Home() {
-  const { data, loading, error } = useQuery(query);
+  const { data, loading, error } = useQuery(allDevroutes );
   const router = useRouter();
   const [loadingCourse, setLoadingCourse] = useState(false);
+
   const handleCardClick = (name) => {
     router.push(`/courses/${name}`);
     setLoadingCourse(true);
@@ -62,7 +49,7 @@ export default function Home() {
       {error && (
         <Alert
           message="Cannot load ebooks"
-          description="Please reload the page."
+          description="Please check your internet connection and then reload the page."
           type="error"
           closable
         />
