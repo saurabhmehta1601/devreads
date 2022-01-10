@@ -1,0 +1,212 @@
+import {Section, CoursePage , H2} from "src/components/exports"
+
+<CoursePage  title = {"Computer Networks"} breakpoints = {[ { "Introduction": ["Terminology"] }, { "Layers of OSI Model": ["Physical Layer", "Data Link Layer"] }, ]} > 
+
+<Section data-name="Terminology">
+
+<H2> Basic Terminology 📖  </H2>
+
+
+
+
+<h3> Protocol  </h3>
+
+
+
+It is a defined set of standards that computer must follow in order to communicate properly .
+
+
+
+<h3> Computer Networking  </h3>
+
+
+
+The name give to full scope of how computers communicate with each other .
+
+
+
+<h3> Physical Layer  </h3>
+
+
+
+Represents the physical devices that interconnects the computers .
+
+
+
+<h3> Data Link Layer  </h3>
+
+
+
+Responsible for defining a common way of interpreting signals so network devices can communicate .
+
+
+
+<h3> Network Layer  </h3>
+
+
+
+Allows different networks to communicate with each other through devices known as routers .
+
+
+
+<h3> Internetwork  </h3>
+
+
+
+A collection of networks connected together through routers ,the most famous of these being the Internet .
+
+
+
+<h3> Transport Layer  </h3>
+
+
+
+It sorts out which client and server programs are supposed to get that data .
+
+
+
+<h3> Cables  </h3>
+
+
+
+Connect different devices to each other allowing data to be transmitted over them .Most common form of copper twisted cables are Cat5,Cat5e and Cat6 cables .
+
+
+
+<h3> Crosstalk  </h3>
+
+
+
+When an electric pulse on one wire is accidently detected on another wire .
+
+
+
+<h3> Fibre Cables  </h3>
+
+
+
+Contains individual optical fibres which are tiny tubes made out of glass about the size of human hair .
+
+
+
+<h3> Hub  </h3>
+
+
+
+A physical layer device which allows for connections from many computers at once .
+
+
+
+<h3> Collision Domain  </h3>
+
+
+
+A network segment where only one device can communicate at a time .If multiple devices try to sending data at the same time , the electrical pulses sent accross the cable can interfere with each other .
+
+
+
+<h3> Router  </h3>
+
+
+
+A device which knows how to send data between independent networks .It operated in layer 3 (Network Layer).
+
+
+
+<h3> Border Gateway Protocol (BGP)  </h3>
+
+
+
+Protocol used by routers to share data with each other which enables them to learn about most optimal paths to forward data .
+
+
+
+</Section>
+
+
+
+<Section data-name="Physical Layer">
+
+<H2> Physical Layer  </H2>
+
+<h3> Bit  </h3>
+
+The smallest representation of data that a computer can understand it is either 1 or 0 .
+
+
+
+<h3> Modulation  </h3>
+
+
+
+A way of varying the voltage of charge moving across a cable . It networking it is known as **line coding** .
+
+
+
+<h3> Simplex and Duplex Communication  </h3>
+
+
+
+The concept that information can flow in both directions across the cable is known as **duplex** communication. If it can flow only in one direction then it is called **simplex** .If information can be sent on both side at same time then it is called **full duplex** while if it can be sent on both directions but not at same time then it is called **half duplex** .
+
+
+
+</Section>
+
+
+
+<Section data-name="Data Link Layer">
+
+<H2> Data Link Layer  </H2>
+
+
+
+---
+
+
+
+<h3> Carrier Sense Multiple Access/Collision Domain ( CSMA/CD )  </h3>
+
+
+
+Used to determine when the communication channels are clear, and when a device is free to transmit data .
+
+
+
+<h3> MAC address  </h3>
+
+
+
+A globally unique identifier attached to an individual network interface . It's a 48 bit number normally represented by six groupings of two hexadecimal numbers. The first three octets are Organisationally Unique Identifier( OUI ) .
+
+Ethernet uses MAC address to ensure that the data it sends has both an address for the machine that sent the transmission as well as the one the transmission was intended for .
+
+
+
+<h3> Unicast , Multicast and Broadcast  </h3>
+
+
+
+If the least significant bit in the first octet of a destination address is set to zero , it means that the ethernet frame is intended for only the destination address while if it is set to 1 then it means we are dealing with multicase frame .In ethernet broadcast data is sent to every device in network which is done by sending data to broadcast address ,ethernet broadcast address is FF:FF:FF:FF:FF:FF .
+
+
+
+<h3> Data packet  </h3>
+
+
+
+An all-emcompassing term that represents any single set of binary data being sent across a network link .
+
+
+
+<h3> Ethernet frame  </h3>
+
+
+
+A highly structured collection of information presented in a specific order .
+
+
+
+</Section>
+
+</CoursePage>
