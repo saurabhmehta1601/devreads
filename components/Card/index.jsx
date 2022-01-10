@@ -2,14 +2,10 @@ import { Card } from "antd";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
-export default function CourseCard({
-  onClick,
-  course: { name, description, thumb_url },
-}) {
-  const { Meta } = Card;
+const transformName = (name) => name.split("-").join(" ").toUpperCase();
 
-  const transformName = (name) => name.split("-").join(" ").toUpperCase();
-
+export default function AntCard(props) {
+  const { name, description, thumb_url } = props.course;
   return (
     <Card
       style={{
@@ -17,7 +13,6 @@ export default function CourseCard({
         boxShadow: "0 0 16px 4px rgba(0,0,0,0.4)",
       }}
       className={styles.card}
-      onClick={onClick}
       cover={
         <Image
           alt={name}
@@ -27,8 +22,9 @@ export default function CourseCard({
           src={thumb_url}
         />
       }
+      {...props}
     >
-      <Meta
+      <Card.Meta
         title={name ? transformName(name) : name}
         description={description}
       />
