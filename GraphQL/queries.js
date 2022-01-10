@@ -1,3 +1,5 @@
+const { gql } = require("@apollo/client");
+
 const allDevroutes = gql`
   query allDevroutes {
     devroutes {
@@ -12,4 +14,4 @@ const allDevroutes = gql`
     }
   }
 `;
-export default { allDevroutes };
+module.exports = { allDevroutes };

@@ -1,12 +1,12 @@
-import { gql, useQuery } from "@apollo/client";
+const { allDevroutes } = require("../GraphQL/queries");
+import { useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
 import { Section, Card, Carousel, LoadingPage } from "../components/exports";
 import { Alert, Typography } from "antd";
 import { useRouter } from "next/router";
-import { allDevroutes } from "../GraphQL/queries";
 
 export default function Home() {
-  const { data, loading, error } = useQuery(allDevroutes );
+  const { data, loading, error } = useQuery(allDevroutes);
   const router = useRouter();
   const [loadingCourse, setLoadingCourse] = useState(false);
 
