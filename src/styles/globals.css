@@ -75,10 +75,6 @@ li {
   text-indent: 8px;
 }
 
-.carousel-container {
-  padding: 1.5em;
-}
-
 pre {
   background-color: #fff;
   padding: 0.7em;
@@ -88,5 +84,5 @@ pre {
 }
 
 code {
-  margin: 1em ;
+  margin: 1em;
 }

@@ -4,9 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 import "antd/dist/antd.css";
 import "../styles/globals.css";
 import { ApolloProvider } from "@apollo/client";
-import client from "../client";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import client from "../GraphQL/client";
+import { Header, Footer } from "../components/exports";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "../redux/store";
 
