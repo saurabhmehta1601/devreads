@@ -1,15 +1,18 @@
 {
-  "name": "client",
+  "name": "devreads",
   "private": true,
+  "engines": {
+    "yarn": "*",
+    "npm": "PLEASE USE YARN"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:watch": "next-remote-watch ./courses",
     "prepare": "husky install",
     "commit": "cz",
-    "del-branch": "./scripts/delete-branch"
+    "del-branch": "./src/scripts/delete-branch"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",
