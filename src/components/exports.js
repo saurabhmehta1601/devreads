@@ -12,3 +12,4 @@ export { default as Command } from "./Command";
 export { default as Carousel } from "./Carousel";
 export { default as H2 } from "./H2";
 export { default as CoursePage } from "./CoursePage";
+export { default as MCQ } from "./MCQ";
