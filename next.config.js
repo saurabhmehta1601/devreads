@@ -18,7 +18,7 @@ const nextConfig = {
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [],
+    remarkPlugins: [require("remark-prism")],
     rehypePlugins: [],
   },
 });
