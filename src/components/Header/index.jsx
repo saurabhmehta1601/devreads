@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Typography } from "antd";
 import styles from "./styles.module.css";
 import Link from "next/link";
-import { FaMusic } from "react-icons/fa";
 
 import { RiMusic2Fill, RiMusic2Line } from "react-icons/ri";
 
@@ -23,7 +22,7 @@ export default function Header() {
         <Link href="/"> DevReads </Link>
         <audio
           ref={audioRef}
-          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          src='https://cdn.pixabay.com/download/audio/2022/12/07/audio_de9c89bdca.mp3?filename=silent-night-128573.mp3'
         />
         {playMusic ? (
           <RiMusic2Fill
